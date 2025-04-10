@@ -1,0 +1,86 @@
+@import "tailwindcss";
+/*@import "@radix-ui/themes/styles.css";*/
+
+:root {
+  /* Absolute Colors */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* === Primary Red Shades === */
+  --primary-900: #E50000;
+  --primary-800: #FF0000;
+  --primary-700: #FF1919;
+  --primary-600: #FF3333;
+  --primary-500: #FF9999;
+  --primary-400: #FFCCCC;
+  --primary-300: #FFE5E5;
+  --primary-200: #FFFAFA;
+  --primary-100: #FFFAFA;
+
+  /* === Dark / Black Shades === */
+  --dark-900: #0F0F0F;
+  --dark-800: #141414;
+  --dark-700: #1A1A1A;
+  --dark-600: #1F1F1F;
+  --dark-500: #262626;
+  --dark-400: #333333;
+  --dark-300: #404040;
+  --dark-200: #4C4C4C;
+  --dark-100: #4C4C4C;
+
+  /* === Grey Shades === */
+  --gray-900: #999999;
+  --gray-800: #A6A6A6;
+  --gray-700: #B3B3B3;
+  --gray-600: #BFBFBF;
+  --gray-500: #E4E4E7;
+  --gray-400: #F1F1F3;
+  --gray-300: #F7F7F8;
+  --gray-200: #FCFCFD;
+  --gray-100: #FCFCFD;
+}
+
+@theme inline {
+  --color-background: var(--dark-800);
+  --color-foreground: var(--gray-900);
+  --font-manrope: var(--font-manrope);
+
+  /* === Primary Red Shades === */
+  --color-primary-900: #E50000;
+  --color-primary-800: #FF0000;
+  --color-primary-700: #FF1919;
+  --color-primary-600: #FF3333;
+  --color-primary-500: #FF9999;
+  --color-primary-400: #FFCCCC;
+  --color-primary-300: #FFE5E5;
+  --color-primary-200: #FFFAFA;
+  --color-primary-100: #FFFAFA;
+
+  /* === Dark / Black Shades === */
+  --color-dark-900: #0F0F0F;
+  --color-dark-800: #141414;
+  --color-dark-700: #1A1A1A;
+  --color-dark-600: #1F1F1F;
+  --color-dark-500: #262626;
+  --color-dark-400: #333333;
+  --color-dark-300: #404040;
+  --color-dark-200: #4C4C4C;
+  --color-dark-100: #4C4C4C;
+
+  /* === Grey Shades === */
+  --color-gray-900: #999999;
+  --color-gray-800: #A6A6A6;
+  --color-gray-700: #B3B3B3;
+  --color-gray-600: #BFBFBF;
+  --color-gray-500: #E4E4E7;
+  --color-gray-400: #F1F1F3;
+  --color-gray-300: #F7F7F8;
+  --color-gray-200: #FCFCFD;
+  --color-gray-100: #FCFCFD;
+}
+
+body {
+  background: var(--dark-800);
+  color: var(--gray-900);
+  font-family: var(--font-manrope), sans-serif;
+}
