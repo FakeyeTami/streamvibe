@@ -1,21 +1,21 @@
 <div align="center">
-  <img src="./public/streamvibe-banner.svg" alt="StreamVibe" width="250">
+  <img src="./public/assets/streamvibe-banner.svg" alt="StreamVibe" width="250">
   <br><br>
   Unlocking the World of Cinema — One Click at a Time.
   <br><br>
   <p>
     <a href="https://streamvibe.vercel.app/">View Demo</a>
     &nbsp;·&nbsp;
-    <a href="https://github.com/yourusername/streamvibe/issues">Report Bug</a>
+    <a href="https://github.com/FakeyeTami/streamvibe/issues">Report Bug</a>
     &nbsp;·&nbsp;
-    <a href="https://github.com/yourusername/streamvibe/issues">Request Feature</a>
+    <a href="https://github.com/FakeyeTami/streamvibe/issues">Request Feature</a>
   </p>
 </div>
 
 <!-- Badges -->
 <div align="center">
 
-  ![GitHub deployments](https://img.shields.io/github/deployments/yourusername/cineverse-lite/production?style=for-the-badge&logo=vercel&logoColor=white&label=Vercel%20Deployment&labelColor=%23000&color=white)
+  ![GitHub deployments](https://img.shields.io/github/deployments/FakeyeTami/streamvibe/production?style=for-the-badge&logo=vercel&logoColor=white&label=Vercel%20Deployment&labelColor=%23000&color=white)
 
 </div>
 
@@ -102,7 +102,7 @@ To set up **CineVerse Lite** locally:
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/streamvibe.git
+git clone https://github.com/FakeyeTami/streamvibe.git
 ```
 
 2. Navigate into the project directory
