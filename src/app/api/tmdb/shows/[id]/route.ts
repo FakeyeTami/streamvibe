@@ -7,12 +7,12 @@ export async function GET(
   const { id } = await context.params;
 
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}`,
+    `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_API_KEY}`,
   );
 
   if (!res.ok)
     return NextResponse.json(
-      { error: "Movie does not exist" },
+      { error: "Series does not exist" },
       { status: 400 },
     );
 
