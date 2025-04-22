@@ -7,7 +7,7 @@ export async function GET(
   const { id } = await context.params;
 
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`,
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}`,
   );
 
   if (!res.ok)
