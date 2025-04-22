@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
+import { TmdbIdParams } from "@/types/tmdb"; // Adjust the path to where the type is located
 
 export async function GET(
   request: NextRequest,
-  context: { params: { id: string } },
+  context: { params: TmdbIdParams },
 ) {
   const { id } = await context.params;
 
