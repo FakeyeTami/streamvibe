@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
+import { TmdbIdParams } from "@/types/tmdb"; // Adjust the path to where the type is located
 
 export async function GET(
   request: NextRequest,
-  context: { params: { id: string } },
+  context: { params: TmdbIdParams },
 ) {
   const { id } = await context.params;
 
   const res = await fetch(
-    `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_API_KEY}`,
+    `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`,
   );
 
   if (!res.ok)
