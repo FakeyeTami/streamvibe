@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchSearch } from "@/lib/fetchSearch";
 
-export function useSearch(query: string) {
+export function useSearch(query: string | null) {
   return useQuery({
     queryKey: ["search", query],
     queryFn: () => fetchSearch(query),
