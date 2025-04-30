@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Search } from "@/components/navbar/Search";
 import { NavLinks } from "@/components/navbar/NavLinks";
-import { Container } from "@radix-ui/themes";
 
 export default function Navbar() {
   return (
