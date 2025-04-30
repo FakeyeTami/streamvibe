@@ -2,13 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Search } from "@/components/navbar/Search";
 import { NavLinks } from "@/components/navbar/NavLinks";
+import { Container } from "@radix-ui/themes";
 
 export default function Navbar() {
   return (
-    <nav className="hidden md:flex md:justify-around md:items-center md:py-5">
-      <Logo />
-      <NavLinks />
-      <Search />
+    <nav className="fixed top-0 w-full flex justify-center items-center">
+      <div className="hidden md:flex w-full max-w-7xl justify-between items-center py-6 px-4">
+        <Logo />
+        <NavLinks />
+        <Search />
+      </div>
     </nav>
   );
 }
@@ -16,7 +19,7 @@ export default function Navbar() {
 function Logo() {
   return (
     <Link href="/">
-      <Image src="/assets/Logo.svg" alt="logo" width={200} height={200} />
+      <Image src="/assets/Logo.svg" alt="logo" width={166} height={60} />
     </Link>
   );
 }
