@@ -39,7 +39,7 @@ function NavLink({
   return (
     <Link
       href={link}
-      className={`text-md font-medium py-3 px-5 rounded-md hover:bg-dark-700 ${isActive ? "text-white bg-dark-700" : ""}`}
+      className={`text-sm font-medium py-2.5 px-3.5 rounded-md hover:bg-dark-700 ${isActive ? "text-white bg-dark-700" : ""}`}
     >
       {title}
     </Link>

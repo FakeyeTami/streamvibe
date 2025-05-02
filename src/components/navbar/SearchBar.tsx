@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Search as LucideSearch } from "lucide-react";
 
-export function Search() {
+export function SearchBar() {
   const [query, setQuery] = useState("");
   const router = useRouter();
 
