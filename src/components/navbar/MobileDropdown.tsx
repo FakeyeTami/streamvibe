@@ -2,12 +2,9 @@
 
 import Link from "next/link";
 import { Button, DropdownMenu } from "@radix-ui/themes";
-import { usePathname } from "next/navigation";
 import { NavItem } from "@/components/navbar/NavLinks";
 
 export function MobileDropdown() {
-  const pathname = usePathname();
-
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger>
