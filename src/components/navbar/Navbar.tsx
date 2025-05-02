@@ -7,16 +7,24 @@ import { NavLinks } from "@/components/navbar/NavLinks";
 import { Search as SearchIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { MobileDropdown } from "@/components/navbar/MobileDropdown";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <header className="fixed top-0 w-full z-50">
-      <nav className="w-full md:max-w-4xl lg:max-w-7xl mx-auto px-5">
-        <div className="hidden md:flex justify-between items-center py-6">
-          <Logo />
-          <NavLinks />
+      <nav className="w-full md:max-w-5xl lg:max-w-7xl mx-auto px-8">
+        <div className="flex items-center justify-between py-6">
+          <div className="flex items-center gap-4">
+            <Logo />
+            <div className="flex lg:hidden">
+              <MobileDropdown />
+            </div>
+          </div>
+          <div className="hidden lg:flex">
+            <NavLinks />
+          </div>
           <SearchIcon
             onClick={() => setIsActive(!isActive)}
             className="cursor-pointer text-white"
@@ -47,7 +55,14 @@ export default function Navbar() {
 function Logo() {
   return (
     <Link href="/">
-      <Image src="/assets/Logo.svg" alt="logo" width={166} height={60} />
+      <div className="relative w-28 h-10 sm:w-[166px] sm:h-[60px]">
+        <Image
+          src="/assets/Logo.svg"
+          alt="logo"
+          fill
+          className="object-contain"
+        />
+      </div>
     </Link>
   );
 }

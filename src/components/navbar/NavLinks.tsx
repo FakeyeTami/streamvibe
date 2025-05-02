@@ -2,8 +2,9 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { Navlink } from "@/types/navlink";
 
-const NavItem = [
+export const NavItem = [
   { title: "Home", link: "/" },
   { title: "Movies & Shows", link: "/movies-shows" },
   { title: "Support", link: "/support" },
@@ -15,11 +16,11 @@ export function NavLinks() {
 
   return (
     <ul className="flex items-center p-3 gap-4 rounded-xl bg-dark-900 border-4 border-dark-600">
-      {NavItem.map((item, i) => (
+      {NavItem.map((item) => (
         <NavLink
           title={item.title}
           link={item.link}
-          key={i}
+          key={item.link}
           isActive={pathname === item.link}
         />
       ))}
@@ -27,19 +28,11 @@ export function NavLinks() {
   );
 }
 
-function NavLink({
-  title,
-  link,
-  isActive,
-}: {
-  title: string;
-  link: string;
-  isActive: boolean;
-}) {
+function NavLink({ title, link, isActive }: Navlink) {
   return (
     <Link
       href={link}
-      className={`text-sm font-medium py-2.5 px-3.5 rounded-md hover:bg-dark-700 ${isActive ? "text-white bg-dark-700" : ""}`}
+      className={`font-medium py-2.5 px-3.5 rounded-md hover:bg-dark-700 ${isActive ? "text-white bg-dark-700" : ""}`}
     >
       {title}
     </Link>
