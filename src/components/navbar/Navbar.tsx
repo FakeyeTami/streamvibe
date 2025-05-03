@@ -14,21 +14,25 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 w-full z-50">
-      <nav className="w-full md:max-w-5xl lg:max-w-7xl mx-auto px-8">
-        <div className="flex items-center justify-between py-6">
-          <div className="flex items-center gap-4">
+      <nav className="w-full md:max-w-5xl lg:max-w-[1380px] mx-auto px-8 relative">
+        <div className="flex items-center justify-between py-6 relative">
+          <div className="flex items-center gap-4 z-20">
             <Logo />
             <div className="flex lg:hidden">
               <MobileDropdown />
             </div>
           </div>
-          <div className="hidden lg:flex">
+
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:flex z-10">
             <NavLinks />
           </div>
-          <SearchIcon
-            onClick={() => setIsActive(!isActive)}
-            className="cursor-pointer text-white"
-          />
+
+          <div className="z-20">
+            <SearchIcon
+              onClick={() => setIsActive(!isActive)}
+              className="cursor-pointer text-white"
+            />
+          </div>
         </div>
       </nav>
 

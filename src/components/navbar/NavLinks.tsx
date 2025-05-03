@@ -15,7 +15,7 @@ export function NavLinks() {
   const pathname = usePathname();
 
   return (
-    <ul className="flex items-center p-3 gap-4 rounded-xl bg-dark-900 border-4 border-dark-600">
+    <ul className="flex items-center p-3 gap-3 rounded-xl bg-dark-900 border-4 border-dark-600">
       {NavItem.map((item) => (
         <NavLink
           title={item.title}
