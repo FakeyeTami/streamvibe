@@ -1,3 +1,5 @@
 export type TmdbIdParams = {
-  id: string;
+  params: {
+    id: string;
+  };
 };
