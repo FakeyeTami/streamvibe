@@ -5,7 +5,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: TmdbIdParams },
 ) {
-  const { id } = params;
+  const { id } = await params;
 
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`,
