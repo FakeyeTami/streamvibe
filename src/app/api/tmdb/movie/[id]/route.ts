@@ -4,7 +4,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } },
 ) {
-  const { id } = await params;
+  const { id } = params;
 
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`,
@@ -13,7 +13,7 @@ export async function GET(
   if (!res.ok) {
     return NextResponse.json(
       { error: "Movie does not exist" },
-      { status: 400 },
+      { status: 404 },
     );
   }
 

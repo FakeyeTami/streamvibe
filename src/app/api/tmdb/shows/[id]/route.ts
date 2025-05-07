@@ -11,7 +11,7 @@ export async function GET(request: NextRequest, { params }: TmdbIdParams) {
   if (!res.ok)
     return NextResponse.json(
       { error: "Series does not exist" },
-      { status: 400 },
+      { status: 404 },
     );
 
   const data = await res.json();
