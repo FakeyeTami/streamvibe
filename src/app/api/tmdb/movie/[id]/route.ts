@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { TmdbIdParams } from "@/types/tmdb";
 
 export async function GET(
   request: NextRequest,
-  context: { params: TmdbIdParams },
+  context: { params: { id: string } },
 ) {
   const { id } = context.params;
 
