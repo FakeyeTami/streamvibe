@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { TmdbIdParams } from "@/types/tmdb";
 
-export async function GET(request: NextRequest, { params }: TmdbIdParams) {
+export async function GET(
+  request: NextRequest,
+  { params }: { params: { id: string } },
+) {
   const { id } = params;
 
   const res = await fetch(
