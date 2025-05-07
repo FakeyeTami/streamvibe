@@ -1,8 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { TmdbIdParams } from "@/types/tmdb";
 
-export async function GET(params: TmdbIdParams) {
-  const { id } = params;
+export async function GET(
+  request: NextRequest,
+  context: { params: TmdbIdParams },
+) {
+  const { id } = context.params;
 
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`,
