@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(
-  request: NextRequest,
-  context: { params: { id: string } },
-) {
+export async function GET(request: NextRequest, context: any) {
   const { id } = context.params;
 
   const res = await fetch(
