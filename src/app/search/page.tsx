@@ -3,14 +3,13 @@
 import { useSearchParams } from "next/navigation";
 import { useSearch } from "@/hooks/useSearch";
 import { Container } from "@radix-ui/themes";
+import { Suspense } from "react";
 
-export default function SearchPage() {
+function SearchPageContent() {
   const searchParams = useSearchParams();
   const query = searchParams.get("query") || "";
 
   const { data, isLoading } = useSearch(query);
-
-  if (isLoading) return;
 
   return (
     <Container>
@@ -19,11 +18,19 @@ export default function SearchPage() {
         {isLoading ? (
           <p>Loading...</p>
         ) : (
-          data.results?.map((item: { id: number; name: string }) => (
+          data?.results?.map((item: { id: number; name: string }) => (
             <li key={item.id}>{item?.name}</li>
           ))
         )}
       </ul>
     </Container>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<p>Loading search...</p>}>
+      <SearchPageContent />
+    </Suspense>
   );
 }

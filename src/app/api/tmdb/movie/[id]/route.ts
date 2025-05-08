@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
   request: NextRequest,
-  context: { params: { id: string } },
+  { params }: { params: Promise<{ id: string }> },
 ) {
-  const { id } = await context.params;
+  const id = (await params).id;
 
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`,
@@ -18,5 +18,5 @@ export async function GET(
   }
 
   const data = await res.json();
-  return NextResponse.json(data);
+  return NextResponse.json(data, { status: 200 });
 }
