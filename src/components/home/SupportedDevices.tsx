@@ -1,5 +1,4 @@
 import DeviceCard from "@/components/DeviceCard";
-// @ts-ignore
 import {
   Gamepad2,
   Headset,
