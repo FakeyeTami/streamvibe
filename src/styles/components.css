@@ -1,0 +1,33 @@
+.icon-style {
+    @apply w-10 h-10 text-dark-800 fill-primary-700;
+}
+
+.section-container {
+    @apply w-full px-4 md:px-6 flex items-center justify-center;
+}
+.section-container-wide {
+    @apply w-full md:max-w-[1597px] mx-auto px-8 flex flex-col gap-y-20;
+}
+
+.heading-primary {
+    @apply text-2xl font-bold md:text-5xl text-white text-center;
+}
+.heading-secondary {
+    @apply text-2xl font-bold md:text-4xl text-white;
+}
+
+.paragraph-text {
+    @apply text-sm md:text-base ;
+}
+
+.flex-center {
+    @apply flex items-center justify-center;
+}
+
+.flex-column-center {
+    @apply flex flex-col items-center justify-between gap-3.5;
+}
+
+.primary-button {
+    @apply bg-red-700 text-white flex items-center justify-center py-3.5 px-5 rounded-lg;
+}
